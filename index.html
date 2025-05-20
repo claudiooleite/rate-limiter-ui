@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rate Limiter UI</title>
+    <style>
+      body { font-family: sans-serif; padding: 2rem; }
+      .log { margin-top: 1rem; border: 1px solid #ccc; padding: 1rem; max-height: 200px; overflow-y: scroll; }
+      .allowed { color: green; }
+      .blocked { color: red; }
+    </style>
+  </head>
+  <body>
+    <h2>Rate Limiter Demo</h2>
+
+    <label>Max Requests: <input type="number" id="limit" value="3" /></label><br />
+    <label>Interval (ms): <input type="number" id="interval" value="5000" /></label><br />
+    <button onclick="updateLimiter()">Update Rate</button><br /><br />
+
+    <button onclick="sendRequest()">Send Request</button>
+
+    <div class="log" id="log"></div>
+
+    <script src="rate-limiter.js"></script>
+  </body>
+</html>
